@@ -119,13 +119,13 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
    
 6. Edit the **Status** column within the table.
 
-    > [!NOTE]
-    >
-    > If you don't have a status column, you may need to add one via the Copilot chat first using statements such as:
-    > 
-    > * `add a status column to track the status of the showing`
-    > * `status should have options for Pending, Confirmed, and Cancelled`
-    > * `set the default choice of Status to Pending`
+> [!NOTE]
+>
+> If you don't have a status column, you may need to add one via the Copilot chat first using statements such as:
+> 
+> * `add a status column to track the status of the showing`
+> * `status should have options for Pending, Confirmed, and Cancelled`
+> * `set the default choice of Status to Pending`
 
     In the text box within the **Copilot** pane, enter the following text and then send it:
 
@@ -133,22 +133,22 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
    The system might take a minute to load. When it does, the **Status** column shows as updated and includes the option for **Completed**.
 
-1. Select the **Status** column name dropdown menu and then select **View column** where you can view the columns’ properties and the current status details and data.
+7. Select the **Status** column name dropdown menu and then select **View column** where you can view the columns’ properties and the current status details and data.
 
    ![Screenshot of the Status column properties with the updated choices.](./assets/copilot-status-column.png)
    
 
-   > [!NOTE]
-   >
-   > If your column choices aren't the same as the ones that are shown in the screenshot, enter the following command into the **Copilot** pane text box and then send it:
-   >
-   > `the status choices should be Pending, Confirmed, Cancelled, and Completed`
+> [!NOTE]
+>
+> If your column choices aren't the same as the ones that are shown in the screenshot, enter the following command into the **Copilot** pane text box and then send it:
+>
+> `the status choices should be Pending, Confirmed, Cancelled, and Completed`
    
 
    Select the **X** in the upper-right corner of the pane to close it.
 
    Next, you'll add more data to your table and the existing columns.
-1. In the **Copilot** pane text box, enter and send the following text:
+8. In the **Copilot** pane text box, enter and send the following text:
 
    `add 5 more rows of data`
 
