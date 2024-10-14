@@ -127,11 +127,11 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 > * ```status should have options for Pending, Confirmed, and Cancelled```
 > * ```set the default choice of Status to Pending```
 
-    In the text box within the **Copilot** pane, enter the following text and then send it:
+In the text box within the **Copilot** pane, enter the following text and then send it:
 
    `add an option for “Completed” to the Status column`
 
-   The system might take a minute to load. When it does, the **Status** column shows as updated and includes the option for **Completed**.
+The system might take a minute to load. When it does, the **Status** column shows as updated and includes the option for **Completed**.
 
 7. Select the **Status** column name dropdown menu and then select **View column** where you can view the columns’ properties and the current status details and data.
 
