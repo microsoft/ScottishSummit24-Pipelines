@@ -157,7 +157,7 @@ Next, you'll add more data to your table and the existing columns.
    ![Screenshot of the Real Estate Showings table showing five added rows of data.](./assets/copilot-table-new-rows.png)
    
 
-   Your table should have several columns. However, to continue following the modules in this learning path, try to remove some columns that you won't use.
+   Your table should have several columns. However, to continue following the labs in this workshop, try to remove some columns that you won't use.
 
    The list of columns that you need are:
 
