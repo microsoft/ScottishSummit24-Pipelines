@@ -1,109 +1,202 @@
-# 🚀 Lab 5: Connect your own WebAPI to your Power App
+# 🚀 Lab 5: Extend pipelines using GitHub Actions
 
-> **Note:**
-> This lab is optional. Only do this one when you are finished with lab 1 - lab 4.
+> [!NOTE]
+> 
+> This lab is optional and less extensive as the earlier labs. Only do this one when you are finished with lab 1 - lab 4. Request the App Registration details from the trainers
 
 ## 📝 Lab 5 - Tasks
 
 In this lab, you will go though the following tasks:
 
-- Create an ASP.NET project in Visual Studio
-- Add Power Platform as a connected service
-- Create a canvas app with the custom connector
+- Create a GitHub account
+- Create a GitHub repository
+- Create a Power Automate cloud flow to store source code in a GitHub repository
 
-## ☑️ Task 1: Create an ASP.NET project in Visual Studio
+## ☑️ Task 1: Create a GitHub account
 
-In this task, we will create an ASP.NET project in Visual Studio.
+## ☑️ Task 2: Create a GitHub repository
 
-1. Open Visual Studio 2022
+## ☑️ Task 3: Create a Power Automate cloud flow to store source code in a GitHub repository
 
-1. Select **Create a new project**
+This article demonstrates using [GitHub Actions](https://docs.github.com/en/actions/quickstart) and Power Automate cloud flows for extending pipelines in Power Platform. When a pipelines deployment is submitted, a cloud flow triggers the GitHub workflow to download, unpack, and commit the artifact's source code to a GitHub branch.
 
-    ![TODO](./assets/asp-net-core-webapi.png)
+### Workflow details
 
-1. Search for `ASP.NET Core Web API`, select the one that has C# in the tags and select **Next**
+The workflow is triggered via a `workflow_dispatch` event. The workflow runs on `ubuntu-latest` and has the `contents: write` permission to be able to commit changes to the GitHub repository branch.
 
-1. Enter the following details and select **Next**:
+The workflow consists of the following steps:
 
-    Enter `WeatherSample` for the Project name
+1. `actions/checkout@v3`: Checks out the repository.
+1. `create new branch if specified`: Creates a new branch if a `target_branch` is specified in the inputs.
+1. `download solution from artifact`: Downloads the solution from the artifact created by pipelines.
+1. `unpack solution`: Unpacks the solution.
+1. `commit changes`: Commits changes to the existing or new branch.
+1. `push to branch`: Pushes the committed changes to the source branch.
 
-    Enter `C:\Dev` for the Location
+### Workflow inputs
 
-1. In the next screen, select **Create**
+The following workflow inputs are required or optional:
 
-This should create your ASP.NET Code Web API project and open it in Visual Studio 2022.
+- `artifact_url` (required): The URL of the Dataverse row (record) ID for the artifact created by the pipelines.
+- `solution_name` (required): Name of the solution in the Dataverse environment.
+- `source_branch` (required): Branch for the solution commit.
+- `target_branch` (optional): Branch to create for the solution commit. If not specified, the `source_branch` is used.
+- `commit_message` (required): Message to provide for the commit.
 
-![TODO](./assets/asp-net-core-webapi-created.png)
+## Workflow secrets
 
-## ☑️ Task 2: Add Power Platform as a connected service
+The following secrets are required to connect to Dataverse using an Application User configured in Dataverse and in Microsoft Entra ID (AD). Configure these secrets in the GitHub repository settings.
 
-In this task, you will add the Connected Service for Power Platform to your ASP.NET Code Web API project.
+- `CLIENT_ID`: The client ID of the registered Microsoft Entra application.
+- `TENANT_ID`: The tenant ID of the Microsoft Entra directory associated with the Microsoft Entra application.
+- `CLIENT_SECRET`: The client secret of the registered Microsoft Entra application.
 
-![Screenshot of adding a service dependency in Visual Studio.](./assets/vs-step2-1.png)
+For more information see [Creating and using encrypted secrets](https://docs.github.com/actions/reference/encrypted-secrets) and [Create an application user](https://learn.microsoft.com/power-platform/admin/manage-application-users#create-an-application-user).
 
-1. In **Solution Explorer**, right-click the **Connected Services** node and select **Manage Connected Services** from the context menu.
+### Workflow code
 
-1. In the **Connected Services** tab, select the **+** icon for **Service Dependencies**.
+Listed below is the GitHub Actions workflow code.
 
-1. On the **Add dependency** dialog, type `Power Platform` into the search box.
+```makefile
+name: Download, unpack and commit the solution to git
+run-name: Getting ${{ github.event.inputs.solution_name }} from pipelines host environment and committing
+on:
+  workflow_dispatch:
+    inputs:
+      artifact_url:
+        description: "The url of the Dataverse record ID for the artifact created by the pipelines (Example: https://[your-env].crm.dynamics.com/api/data/v9.0/deploymentartifacts([your-artifact-id])/artifactfile/$value)."
+        required: true
+      solution_name:
+        description: "Name of the Solution in Dataverse environment"
+        required: true
+      user_name: 
+        description: "User name for the commit"
+        required: true
+      source_branch:
+        description: "Branch for the solution commit"
+        required: true
+      target_branch:
+        description: "Branch to create for the solution commit"
+        required: false
+      commit_message:
+        description: "Message to provide for the commit"
+        required: true
+permissions:
+  contents: write
+jobs:
+  export-unpack-commit:
+    runs-on: ubuntu-latest
 
-1. Select **Microsoft Power Platform**, and then select **Next**.
+    steps:
+      - uses: actions/checkout@v3
+        with:
+            ref: ${{ github.event.inputs.source_branch }}
 
-   If you aren't signed in already, sign into your Microsoft Power Platform account. If you don't have a Power Platform account, [Create a Developer Environment](create-developer-environment.md).
+      # Commit changes to the existing or new branch
+      - name: create new branch if specified
+        shell: pwsh
+        run: |
+            if('${{ github.event.inputs.target_branch }}' -ne '') {
+                git checkout -b ${{ github.event.inputs.target_branch }} ${{ github.event.inputs.source_branch }}
+            }
 
-1. In the **Connect to Microsoft Power Platform** screen: select your developer environment.
+      # Export the solution from the artifact created by pipelines
+      - name: download solution from artifact
+        env:
+            CLIENT_ID: ${{secrets.CLIENT_ID}}   
+            TENANT_ID: ${{secrets.TENANT_ID}}   
+            CLIENT_SECRET: ${{secrets.CLIENT_SECRET}}
+        shell: pwsh
+        run: |
+            $aadHost = "login.microsoftonline.com"
+            $url = "${{ github.event.inputs.artifact_url }}"
+            $options = [System.StringSplitOptions]::RemoveEmptyEntries
+            $dataverseHost = $url.Split("://", $options)[1].Split("/")[0]
 
-1. In **Custom connectors name**, the value `WeatherSample_Connector` should already be set.
+            $body = @{client_id = $env:CLIENT_ID; client_secret = $env:CLIENT_SECRET; grant_type = "client_credentials"; scope = "https://$dataverseHost/.default"; }
+            $OAuthReq = Invoke-RestMethod -Method Post -Uri "https://$aadHost/$env:TENANT_ID/oauth2/v2.0/token" -Body $body
+            $spnToken = $OAuthReq.access_token
+            $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
+            $headers.Add("Authorization", "Bearer $spnToken")
+            $headers.Add("Content-Type", "application/json")
 
-1. In **Select a public dev tunnel**, select the **+** icon.
+            # Download the managed solution
+            $response = Invoke-RestMethod "${{ github.event.inputs.artifact_url }}" -Method 'GET' -Headers $headers
+            $bytes = [Convert]::FromBase64String($response.value)
+            [IO.File]::WriteAllBytes("${{ github.event.inputs.solution_name }}_managed.zip", $bytes)
 
-   1. In the field **Name**, type `SampleTunnel`.
+            # Download the unmanaged solution (for now we will need to use string manipulation to get the unmanaged solution URL, until the API provides this value)
+            $unmanaged_artifact_url = "${{ github.event.inputs.artifact_url }}".Replace("artifactfile", "artifactfileunmanaged")
+            $response = Invoke-RestMethod "$unmanaged_artifact_url" -Method 'GET' -Headers $headers
+            $bytes = [Convert]::FromBase64String($response.value)
+            [IO.File]::WriteAllBytes("${{ github.event.inputs.solution_name }}.zip", $bytes)
 
-   1. Select **Tunnel Type**: **Persistent**.
+      # Unpack the solution
+      - name: unpack solution
+        uses: microsoft/powerplatform-actions/unpack-solution@v0
+        with:
+          solution-file: "${{ github.event.inputs.solution_name }}.zip"
+          solution-folder: "${{ github.event.repository.name }}"
+          solution-type: 'Both'
+          process-canvas-apps: false
+          overwrite-files: true
 
-   1. Select **Access** : **public**.
+      # Commit changes to the existing or new branch
+      - name: commit changes
+        shell: pwsh
+        run: |
+          rm -rf ${{ github.event.inputs.solution_name }}.zip
+          rm -rf ${{ github.event.inputs.solution_name }}_managed.zip
+          git config user.name ${{ github.event.inputs.user_name }}
+          git pull 
+          git add --all
+          git commit -am "${{ github.event.inputs.commit_message }}" --allow-empty
 
-   1. Select **OK**.
+      # Push the committed changes to the source branch
+      - name: push to branch
+        shell: pwsh
+        run: |
+          if('${{ github.event.inputs.target_branch }}' -ne '') {
+              git push origin ${{ github.event.inputs.target_branch }}
+          } else {
+              git push origin ${{ github.event.inputs.source_branch }}
+          }
+```
 
-1. Select **Finish**
+### Example Power Automate flow
 
-1. Once the connected service is configured, select **Close**.
+To call a GitHub workflow, you can create a Power Automate flow that is triggered when a deployment request is made in Dataverse. The flow can be configured to pass the required inputs to the GitHub workflow. For more information on how to create a Power Automate flow, see [Create a flow](https://learn.microsoft.com/power-automate/getting-started#create-a-flow).
 
-## ☑️ Task 3: Create a canvas app with the custom connector
+### Flow details
 
-When Visual Studio runs a web app and a tunnel is active, the web browser opens to a tunnel URL instead of a localhost URL.
+The flow triggers when the `OnDeploymentRequested` action is run in Dataverse. The flow calls the HTTP connector to trigger the GitHub workflow. The flow passes the required inputs to the GitHub workflow. Include the following inputs in the request body:
 
-1. Run your Visual Studio solution and start debugging.
+- `artifact_url`: URL of the Dataverse solution artifact created by the pipelines.
+- `solution_name`: Name of the solution in the Dataverse environment.
+- `user_name`: User name for the commit.
+- `source_branch`: Source branch for the solution commit.
+- `target_branch`: Branch to create for the solution commit.
+- `commit_message`: Message to provide for the commit.
 
-1. When the browser opens, a warning page opens with the first request sent to the tunnel URL. Select **Continue**.
+The values passed into the `artifact_url`, `solution_name`, and `user_name` are pulled from the outputs of the action that triggered the pipeline. The `commit_message` is pulled from the deployment stage run row in Dataverse.
 
-1. With the web API running, open [Power Apps](https://make.powerapps.com) in a new browser tab.
+- `artifact_url`: `@{triggerOutputs()?['body/OutputParameters/ArtifactFileDownloadLink']}`
+- `solution_name`: `@{triggerOutputs()?['body/OutputParameters/ArtifactName']}`
+- `user_name`: `@{triggerOutputs()?['body/OutputParameters/DeployAsUser']}`
+- `commit_message`: `@{outputs('Retrieve_the_Deployment_Stage_Run')?['body/deploymentnotes']}`
 
-1. Select your developer environment in the upper-right corner.
+The flow also uses a personal access token (PAT) to authenticate with GitHub. For more information on how to create a GitHub personal access token see [Creating a personal access token](https://docs.github.com/github/authenticating-to-github/creating-a-personal-access-token). The PAT is passed in the `Authorization` header of the HTTP request.
 
-1. [Create a blank canvas app](https://learn.microsoft.com/power-apps/maker/canvas-apps/create-blank-app) with **Phone** as the format.
+Update the following values in the Flow:
 
-1. In the top menu, select **Add data**.
+- `[GitHub Personal Access Token]` - Replace with your GitHub personal access token.
+- `[GitHub Organization]` - Replace with your GitHub organization name.
+- `[GitHub Repository]` - Replace with your GitHub repository name.
+- `[GitHub Workflow YAML File]` - Replace with your GitHub workflow YAML file name.
+- `[Source Branch]` - Replace with the Git branch to commit the solution.
+- `[Target Branch]` - Replace with the Git branch to create for the solution commit. `Target Branch` is optional. If you don't specify a target branch, then your solution is committed to the `Source Branch`.
 
-1. Search for and select the **WeatherSample_Connector**, and then select **Connect**. More information: [Add connections to your canvas app](https://learn.microsoft.com/power-apps/maker/canvas-apps/add-data-connection)
-
-1. Insert a button and drag it to the bottom of the form.
-
-1. Change the button **Text** to *Load Data*.
-
-1. Enter the following formula in the button's **OnSelect** property:
-
-   ```powerapps-dot
-   ClearCollect(weatherCollection, WeatherSample_Connector.GetWeatherForecast())
-   ```
-
-1. Insert a [vertical gallery](https://learn.microsoft.com/power-apps/maker/canvas-apps/add-gallery)
-
-1. Select the **weatherCollection** as the data source, and then change the layout to **Title and subtitle**.
-
-1. Run the app. It should look like the following example:
-
-![Screenshot of a Power Apps canvas app created using the sample ASP.NET Weather web API.](./assets/vs-powerapp.png)
+![Power Automate flow that shows an OnDeploymentRequested trigger with a step to retrieve the associated deployment stage run and call the GitHub workflow using an HTTP connector](./assets/extend-pipelines-github-export-flow.png)
 
 ## End of labs
 

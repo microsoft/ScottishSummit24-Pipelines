@@ -14,7 +14,7 @@ In this task, you will learn how to extend the pipeline and add an approval befo
 
 1. Go to the [maker portal](https://make.powerapps.com)
 
-2. Check if you are in the `Prod` environment and if not, switch to that environment
+2. Check if you are in the `UserXX-Prod` environment and if not, switch to that environment
 
 ![](./assets/check-environment-prod.png)
 
@@ -44,7 +44,7 @@ In this task, you will learn how to create an approval flow that will handle the
 
 1. Go to the [maker portal](https://make.powerapps.com)
 
-2. Check if you are in the `Prod` environment and if not, switch to that environment
+2. Check if you are in the `UserXX-Prod` environment and if not, switch to that environment
 
 ![](./assets/check-environment-prod.png)
 
@@ -185,7 +185,7 @@ In this task, you are going to find out if the approval you configured in the la
 
 1. Go to **Solutions** via the left menu
 
-1. Select the **MPPC 23** solution by selecting the display name
+1. Select the **Scottish Summit 2024** solution by selecting the display name
 
     ![](./assets/run-first-pipeline-dev.png)
 

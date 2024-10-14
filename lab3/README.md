@@ -11,7 +11,7 @@ In this lab, you will go though the following tasks:
 
 In this task, you will create your first pipeline. The `Deployment Pipeline Configuration` app that you installed in lab 1 will be used for that.
 
-Go to the [maker portal](https://make.powerapps.com), and make sure you are in the `Prod` environment.
+Go to the [maker portal](https://make.powerapps.com), and make sure you are in the `UserXX-Prod` environment.
 
 ![](./assets/prod-env-pipelines-installed.png)
 
@@ -71,11 +71,11 @@ Let's continue our lab and start by adding a new development environment by sele
 
 ![](./assets/create-pipeline-new-development-env-create.png)
 
-A sidebar will be opened, where you can enter the details of the `Dev` environment you created in lab 01.
+A sidebar will be opened, where you can enter the details of the `UserXX-Dev` environment you created in lab 01.
 
 ![](./assets/create-pipeline-new-development-env-details.png)
 
-1. Add `Dev` as the Name
+1. Add `UserXX-Dev` as the Name
 
 1. Set the Environment Type to `Development Environment`
 
@@ -119,7 +119,7 @@ This will open another sidebar where you can add details about your QA environme
 
 In the sidebar, make sure to add the following details:
 
-1. Add `QA` as the `Name`
+1. Add `UserXX-QA` as the `Name`
 
 1. Add `Target Environment` as the `Environment Type`
 
@@ -158,7 +158,7 @@ Make sure to select the **+ New Deployment Stage** button again to add a second 
 
 #### Add the Prod environment
 
-1. Add `Prod` as the Name
+1. Add `UserXX-Prod` as the Name
 
 1. Set the Environment Type to `Target Environment`
 
@@ -180,7 +180,7 @@ Make sure to select the **+ New Deployment Stage** button again to add a second 
 
 ## Task 2: Run the deployment to the QA environment
 
-In this task, you will deploy the solution we created in lab 2 to the QA and Prod environments. Let's start by deploying to QA. In this lab, you have configured a pipeline and the stages that belong to it. But how does a maker deploy a solution from the `Dev` environment to the `QA` and `Prod` environments?
+In this task, you will deploy the solution we created in lab 2 to the QA and Prod environments. Let's start by deploying to QA. In this lab, you have configured a pipeline and the stages that belong to it. But how does a maker deploy a solution from the `UserXX-Dev` environment to the `UserXX-QA` and `UserXX-Prod` environments?
 
 1. Go to the [maker portal](https://make.powerapps.com)
 
@@ -188,7 +188,7 @@ In this task, you will deploy the solution we created in lab 2 to the QA and Pro
 
 1. Go to **Solutions** via the left menu
 
-1. Select the **MPPC 23** solution by selecting the display name
+1. Select the **Scottish Summit 2024** solution by selecting the display name
 
     ![](./assets/run-first-pipeline-dev.png)
 
@@ -240,11 +240,11 @@ As you can see, the last deployed solution version and last deployed date time a
 
 1. Select **Solutions** in the left navigation
 
-1. Check if the `MPPC 23` solution with version 1.0.0.1 is installed in the `QA` environment
+1. Check if the `Scottish Summit 2024` solution with version 1.0.0.1 is installed in the `UserXX-QA` environment
 
     ![](./assets/run-deploy-to-qa-check-qa-solution.png)
 
-1. Open the `MPPC 23`solution by selecting the **display name**
+1. Open the `Scottish Summit 2024`solution by selecting the **display name**
 
     ![](./assets/run-deploy-to-qa-open-solution.png)
 
