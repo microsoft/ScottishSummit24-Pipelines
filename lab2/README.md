@@ -123,9 +123,9 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 >
 > If you don't have a status column, you may need to add one via the Copilot chat first using statements such as:
 > 
-> * `add a status column to track the status of the showing`
-> * `status should have options for Pending, Confirmed, and Cancelled`
-> * `set the default choice of Status to Pending`
+> * ```add a status column to track the status of the showing```
+> * ```status should have options for Pending, Confirmed, and Cancelled```
+> * ```set the default choice of Status to Pending```
 
     In the text box within the **Copilot** pane, enter the following text and then send it:
 
