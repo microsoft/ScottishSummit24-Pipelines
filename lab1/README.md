@@ -34,7 +34,7 @@ With the credentials that were provided to you by the trainers, let's log into t
 
 In this task, you will learn how to install the pipelines for Power Platform solution in your `Prod` environment. This solution is needed to configure pipelines.
 
-> [!NOTE]
+> [!IMPORTANT]
 >  
 > Normally, it's a best practice to install the pipelines solution on a separate "Pipelines Host" environment. In this lab, you will install it in the `UserXX-Prod` environment because a you can have three **free** developer environments, so you don't have space for another `Pipelines Host` environment next to `UserXX-Dev`, `UserXX-QA`, and `UserXX-Prod` environments.
 >
