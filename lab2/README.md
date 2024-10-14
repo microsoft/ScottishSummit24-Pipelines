@@ -102,14 +102,14 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
    ![Screenshot of the newly generated Client Email column.](./assets/copilot-table-new-column-email.png)
    
 
-    > [!NOTE]
-    >
-    > The data that's generated in your table might vary from the data that's shown in the table in the screenshots for this lab.
+        > [!NOTE]
+        >
+        > The data that's generated in your table might vary from the data that's shown in the table in the screenshots for this lab.
    
 
-    > [!NOTE]
-    >
-    > The **Suggestions** section in the lower-left corner of the screen provides you with different suggestions on how you can add to and modify your table.
+        > [!NOTE]
+        >
+        > The **Suggestions** section in the lower-left corner of the screen provides you with different suggestions on how you can add to and modify your table.
    
 
    ![Screenshot showing a list of suggestions to ask Copilot.](./assets/copilot-suggestions.png)
