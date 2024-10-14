@@ -22,7 +22,7 @@ With the credentials that were provided to you by the trainers, let's log into t
 
     ![Sign in screen](assets/pa-sign-in-email.png)
 
-1. Then enter the password and click **Sign in**
+1. Then enter the temporary access pass (TAP) and click **Sign in**
     ![Sign in screen](assets/pa-sign-in-password.png)
 
 1. If you're prompted to stay signed in, click **Yes**
