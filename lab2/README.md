@@ -4,9 +4,10 @@
 
 In this lab, you will go though the following tasks:
 
-- Creating A Canvas App With Power Apps Copilot
 - Creating A Solution
-- Add The Resources Created By Power Apps Copilot To A Solution
+- Setting your preferred solution
+- Creating A Canvas App With Power Apps Copilot
+
 
 ## ☑️ Task 1: Create a solution
 
@@ -22,7 +23,7 @@ In this task, you will create a solution for the components we just created via 
 
     ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Solution.png)
 
-1. Add the solution name `MPPC 23` and select **+ New publisher**
+1. Add the solution display name `Scottish Summit 2024`, change the name to `SS2024` and select **+ New publisher**
 
     ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Publisher.png)
 
@@ -38,13 +39,26 @@ In this task, you will create a solution for the components we just created via 
 
     ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Solution-Create.png)
 
-This concludes task 3, you have created the `MPPC 23` solution.
+This concludes task 3, you have created the `Scottish Summit 2024` solution.
 
 ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Solution-Finished.png)
 
 ## ☑️ Task 2: Set your preferred solution
 
-Bla
+Now you have created your solution, it's time to set the solution as your preferred solution.
+
+1. Select the **gear** icon in the top right corner
+1. Select the text **Set preferred solution**
+
+    ![Screenshot of the solution view where you can use the gear icon to set your preferred solution](./assets/Preferred-Solution-Set.png)
+
+1. Select the **arrow** that points down to show all solutions and select **Scottish Summit 2024**.
+
+    ![Screenshot of the solution view where you can use the gear icon to set your preferred solution](./assets/Preferred-Solution-Select.png)
+
+1. Select the **apply** button to confirm your choice.
+
+    ![Screenshot of the solution view where you can use the gear icon to set your preferred solution](./assets/Preferred-Solution-Apply.png)
 
 ## ☑️ Task 3: Create a Canvas App with Power Apps Copilot
 
