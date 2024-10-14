@@ -271,4 +271,4 @@ In the meantime, you should've gotten another email.
 
 ## End of labs
 
-This is the end of lab 4. Select page 5 below to move to the next lab.
+This is the end of lab 4. [Go to lab 5](../lab5/README.md) to continue.

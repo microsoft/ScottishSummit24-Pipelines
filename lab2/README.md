@@ -8,7 +8,6 @@ In this lab, you will go though the following tasks:
 - Setting your preferred solution
 - Creating A Canvas App With Power Apps Copilot
 
-
 ## ☑️ Task 1: Create a solution
 
 In this task, you will create a solution for the components we just created via Copilot!
@@ -310,4 +309,4 @@ Congratulations! You have now created a Power Apps Canvas App with Copilot!
 
 ## Next lab
 
-This is the end of lab 2. Select the third page below to move to the next lab.
+This is the end of lab 2. [Go to lab 3](../lab3/README.md) to continue.

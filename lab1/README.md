@@ -72,4 +72,4 @@ When finished, you can go to the [maker portal](https://make.powerapps.com) and 
 
 ## Next lab
 
-This is the end of lab 1. Select the second page below to move to the next lab.
+This is the end of lab 1. [Go to lab 2](../lab2/README.md) to continue.
