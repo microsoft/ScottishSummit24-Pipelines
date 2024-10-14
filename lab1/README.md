@@ -54,7 +54,7 @@ There are two ways to install the pipelines solution:
 
     ![](./assets/prod-env-dynamics-365-apps.png)
 
-1. Here you can find the apps that are installed on your `Prod` environment by default. Select the **Install App** button in the command bar at the top
+1. Here you can find the apps that are installed on your `UserXX-Prod` environment by default. Select the **Install App** button in the command bar at the top
 
     ![](./assets/prod-env-install-app.png)
 
