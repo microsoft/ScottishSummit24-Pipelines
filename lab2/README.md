@@ -117,7 +117,7 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
    ![Screenshot showing Copilot conversation history.](./assets/copilot-chat.png)
    
-1. Edit the **Status** column within the table.
+6. Edit the **Status** column within the table.
 
     > [!NOTE]
     >
