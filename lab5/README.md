@@ -1,8 +1,8 @@
-# 🚀 Lab 5: Extend pipelines using GitHub Actions
+# 🚀 Lab 5: Low Code & Code First - Better together
 
 > [!NOTE]
 > 
-> This lab is optional and less extensive as the earlier labs. Only do this one when you are finished with lab 1 - lab 4. Request the App Registration details from the trainers
+> This lab is optional and less extensive as the earlier labs. This lab is all about extending pipelines using GitHub Actions. Only do this one when you are finished with lab 1 - lab 4. Request the App Registration details from the trainers
 
 ## 📝 Lab 5 - Tasks
 
