@@ -144,10 +144,10 @@ The system might take a minute to load. When it does, the **Status** column show
 >
 > `the status choices should be Pending, Confirmed, Cancelled, and Completed`
    
+Select the **X** in the upper-right corner of the pane to close it.
 
-   Select the **X** in the upper-right corner of the pane to close it.
+Next, you'll add more data to your table and the existing columns.
 
-   Next, you'll add more data to your table and the existing columns.
 8. In the **Copilot** pane text box, enter and send the following text:
 
    `add 5 more rows of data`
@@ -172,11 +172,11 @@ The system might take a minute to load. When it does, the **Status** column show
 
    Use what you've learned with the **Copilot Chat** window to adjust your table to match the preceding list. Make sure that you refer to the **Suggestions** section if you need to remove a column, change a column name, or add a column.
 
-1. To create the app, select the **Create app** button in the lower-right corner of the screen.
+8. To create the app, select the **Create app** button in the lower-right corner of the screen.
 
    ![Screenshot of the Create app button in the lower-right corner of the screen.](./assets/copilot-create-app.png)]
    
-1. When the app first loads, a dialog might appear stating **Welcome to Power Apps Studio**. If so, select the **Skip** button.
+9. When the app first loads, a dialog might appear stating **Welcome to Power Apps Studio**. If so, select the **Skip** button.
 
    The app that has been built for you should show in **Edit** mode.
 
@@ -187,38 +187,37 @@ The system might take a minute to load. When it does, the **Status** column show
 1. Select the **Data** icon from the left navigation bar. Copilot has created a **Dataverse** table that's now displaying in the **Environments** section.
 
     ![Screenshot of the Dataverse table called Real Estate Showings in the Data panel of Power Apps Studio.](./assets/copilot-data.png)
-    
 
-    > [!NOTE]
-    >
-    > Currently, Copilot is only supported for Dataverse. You can't use any other data access point at this time.
-    
+> [!NOTE]
+>
+> Currently, Copilot is only supported for Dataverse. You can't use any other data access point at this time.
 
-    Next, you'll edit the table now that the app has been created.
 
-1. Within the **Data** pane, hover your mouse cursor over the table. To the right of the table, select the ellipsis (**...**).
+Next, you'll edit the table now that the app has been created.
 
-1. From the menu, select **Edit data**.
+2. Within the **Data** pane, hover your mouse cursor over the table. To the right of the table, select the ellipsis (**...**).
+
+3. From the menu, select **Edit data**.
 
     ![Screenshot showing the action of selecting the Edit data option.](./assets/copilot-edit-data.png)
     
-1. In the **Edit table** dialog, you can add your own columns to the table or modify existing columns.
+4. In the **Edit table** dialog, you can add your own columns to the table or modify existing columns.
 
     ![Screenshot of the Edit table dialog with the Real Estate Properties data.](./assets/edit-table.png)
     
-1. Select the **ID** column header from the table.
+5. Select the **ID** column header from the table.
 
-1. From the dropdown menu, select the **Edit column** option.
+6. From the dropdown menu, select the **Edit column** option.
 
     ![Screenshot showing the action of editing a column within the Edit table dialog.](./assets/copilot-edit-column.png)
     
-1. In this example, you don't want the **Data type** to be a **Single line of text**. To change that value, go to the **Edit column** pane, and then from the **Data type** dropdown menu, select **# Autonumber**.
+7. In this example, you don't want the **Data type** to be a **Single line of text**. To change that value, go to the **Edit column** pane, and then from the **Data type** dropdown menu, select **# Autonumber**.
 
-1. Select **Save**.
+8. Select **Save**.
 
     ![Screenshot highlighting the Autonumber data type and the Save button.](./assets/save-column.png)
     
-1. Select the **Close** button in the lower-right corner of the **Edit table** dialog.
+9. Select the **Close** button in the lower-right corner of the **Edit table** dialog.
 
     The table should now show as **Refreshed** in the **Data** pane.
 
@@ -228,17 +227,17 @@ The system might take a minute to load. When it does, the **Status** column show
     
 1. Modify the gallery in the application so that it displays the relevant data. Select the **Tree view** icon to return to the Tree view.
 
-1. On the app's main screen, select **RecordsGallery1** to display **Real Estate Showings** and then select the edit button to put the gallery in edit mode.
+2. On the app's main screen, select **RecordsGallery1** to display **Real Estate Showings** and then select the edit button to put the gallery in edit mode.
 
-1. Select the **Title** and then set the **Text** value to the following formula:
+3. Select the **Title** and then set the **Text** value to the following formula:
 
     ```ThisItem.Address```
 
-1. Select the **Subtitle** and then set the **Text** value to the following formula:
+4. Select the **Subtitle** and then set the **Text** value to the following formula:
 
     ```ThisItem.'Client Email'```
 
-1. Select the **Body** and then set the **Text** value to the following formula:
+5. Select the **Body** and then set the **Text** value to the following formula:
 
     ```ThisItem.Status```
 
@@ -246,33 +245,33 @@ The system might take a minute to load. When it does, the **Status** column show
 
     ![Screenshot of a single record in the Real Estate Showings Gallery.](./assets/showings-gallery.png)
     
-1. On the app's main screen, select the **Form** control.
+6. On the app's main screen, select the **Form** control.
 
     ![Screenshot of the selected form control from the app's main screen.](./assets/copilot-form-control.png)
     
-1. On the **Properties** pane on the right, under the **Fields** property, select **Edit fields**.
+7. On the **Properties** pane on the right, under the **Fields** property, select **Edit fields**.
 
     ![Screenshot showing the Edit fields option on the Properties pane.](./assets/copilot-edit-fields.png)
     
-1. In the **Fields** pane, expand the **ID** field.
+8. In the **Fields** pane, expand the **ID** field.
 
-1. From the **Control type** dropdown menu, change the type to **View text**.
+9. From the **Control type** dropdown menu, change the type to **View text**.
 
     ![Screenshot showing the action of changing the ID control type to View text.](./assets/copilot-view-text.png)
 
     Because you previously changed the **ID** field to **Autonumber**, you don’t want users entering their own number; Dataverse automatically enters the numbers for you.
 
-1. In the **Fields** pane, select the **X** in the upper-right corner to close the pane.
+10. In the **Fields** pane, select the **X** in the upper-right corner to close the pane.
 
-1. Make a new request for a property that shows in the app by selecting the **Play** button from the upper part of the screen.
+11. Make a new request for a property that shows in the app by selecting the **Play** button from the upper part of the screen.
 
     ![Screenshot of the Play button in Power Apps Studio.](./assets/copilot-play.png)
     
-1. In the left pane, select the **+New** button.
+12. In the left pane, select the **+New** button.
 
     ![Screenshot highlighting the add New record button in Power Apps Studio.](./assets/copilot-new.png)
     
-1. Though you could modify the form to automatically fill in the fields for you, for this lab, you'll complete this step manually to observe how the app works.
+13. Though you could modify the form to automatically fill in the fields for you, for this lab, you'll complete this step manually to observe how the app works.
 
     Fill in the fields with the following information:
 
@@ -284,27 +283,27 @@ The system might take a minute to load. When it does, the **Status** column show
     - Status - `Pending`
     - Address - `210 Pine Road, Portland, OR 97204`
 
-    > [!NOTE]
-    >
-    > Usually, you would have a lookup field to the **Real Estate Properties** table, this lab doesn't provide one to keep it simple.
+> [!NOTE]
+>
+> Usually, you would have a lookup field to the **Real Estate Properties** table, this lab doesn't provide one to keep it simple.
     
-1. Select the check mark in the upper-right corner of the screen.
+14. Select the check mark in the upper-right corner of the screen.
 
     ![Screenshot of the completed form, showing the check mark that you select to save your changes.](./assets/copilot-checkmark.png)
     
-1. Select the **X** in the upper-right corner to close out of the app.
+15. Select the **X** in the upper-right corner to close out of the app.
 
     If a dialog appears saying **Did you know?**, select **OK**.
 
     The new request is added to the left of the list of requests.
 
-1. From the upper part of your screen, select the **Save** button to save the new app that you created.
+16. From the upper part of your screen, select the **Save** button to save the new app that you created.
 
     ![Screenshot of the Save button in Power Apps Studio.](./assets/copilot-save.png)
     
     If the system prompts you, save the app name as **Real Estate Showings**.
 
-1. Exit the app to return to the Power Apps home page.
+17. Exit the app to return to the Power Apps home page.
 
 Congratulations! You have now created a Power Apps Canvas App with Copilot!
 
