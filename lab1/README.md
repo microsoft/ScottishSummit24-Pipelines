@@ -2,33 +2,23 @@
 
 Before we start with the lab, there are a couple of things we want you to be aware of:
 
-1. You can find the credentials you are going to use for this workshop in the **Environment Details** tab above the instructions
-1. Every time you see a link to a website, make sure to copy the link and paste it into the address bar in your browser in the lab environment. If you don't do this, the links will open in your laptop browser instead
-1. When you log into your account, you might see the following image. Make sure to always select **Ask later**
-
-![Action required screen for adding verification. Ask later must be selected at all times.](./assets/ask-later.png)
+1. Your credentials are provided to you by your trainers during the workshop at Scottish Summit 2024
+1. Instead of a password, you will get asked for a temporary access pass (TAP), this will look a bit different than normally, but it will act the same as a password.
 
 ## Lab 1 - Tasks
 
 In this lab, you will go though the following tasks:
 
-- Log on to your account
-- Create a GitHub account
-- Create a fork of the repository for this workshop
-- Creating a GitHub Codespace
-- Connect to the Power Platform using the Power Platform Command-Line Interface (CLI)
-- Create developer environments
-- Switch between environments with the Power Platform CLI
+- Log into make.powerapps.com with your account
 - Enable Managed Environments on all environments
 - Deploy the pipelines solution to your Prod environment
-- Enable Dataverse settings
 
 ## Task 1: Log on to your account
 
-With the credentials that were provided to you in the **Environment Details** tab, let's log into the account you are going to use during the workshop.
+With the credentials that were provided to you by the trainers, let's log into the account you are going to use during this workshop.
 
 1. Go to [make.powerapps.com](https://make.powerapps.com)
-1. On the sign-in screen, enter the email address that was provided to you in the **Environment Details** and then click **Next**
+1. On the sign-in screen, enter the email address that was provided to you and then click **Next**
 
     ![Sign in screen](assets/pa-sign-in-email.png)
 
