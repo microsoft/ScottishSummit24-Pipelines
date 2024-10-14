@@ -10,7 +10,6 @@ Before we start with the lab, there are a couple of things we want you to be awa
 In this lab, you will go though the following tasks:
 
 - Log into make.powerapps.com with your account
-- Enable Managed Environments on all environments
 - Deploy the pipelines solution to your Prod environment
 
 ## Task 1: Log on to your account
