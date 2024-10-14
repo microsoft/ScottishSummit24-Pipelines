@@ -17,6 +17,7 @@ The labs are as follows:
 - [Lab 02: Develop](./lab2/README.md)
 - [Lab 03: Deploy](./lab3/README.md)
 - [Lab 04: Enterprise Scale](./lab4/README.md)
+- [Lab 05: Low Code & Code First - Better together](./lab5/README.md)
 
 ## Trademarks
 

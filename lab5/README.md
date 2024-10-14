@@ -215,4 +215,4 @@ Update the following values in the Flow:
 
 ## End of labs
 
-This is the end of the optional lab 5 and the workshop, select the link below to move back to the workshop readme.
+This is the end of the optional lab 5 and the workshop!
