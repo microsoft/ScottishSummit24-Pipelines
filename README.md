@@ -1,14 +1,22 @@
-# Project
+# 🔌 Build, Deploy, and Scale Power Apps with pipelines for Power Platform
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+> [!NOTE]
+> This repository is for the "Build, Deploy, and Scale Power Apps with pipelines for Power Platform" workshop at the Scottish Summit on the 17th of October 2024 in Aberdeen, Scotland.
 
-As the maintainer of this project, please make a few updates:
+![Microsoft Power Platform Conference Logo](./assets/ScottishSummitLogo.png)
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+## 📝 Workshop description
+
+Learn how to build and deploy Power Apps for enterprise scale across your organization. For more advanced makers and developers, you'll get hands-on experience with the full application lifecycle: from setting up your tenant with the right guardrails, development best practices to ensure your apps run performantly, deploying your work using the newest AI-powered pipelines ALM capabilities, and ensuring all this is easily governable.
+
+## 🚀 Labs
+
+The labs are as follows:
+
+- [Lab 01: Setup and configure](./lab1/README.md)
+- [Lab 02: Develop](./lab2/README.md)
+- [Lab 03: Deploy](./lab3/README.md)
+- [Lab 04: Enterprise Scale](./lab4/README.md)
 
 ## Contributing
 
