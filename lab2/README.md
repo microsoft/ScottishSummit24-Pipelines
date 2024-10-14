@@ -129,7 +129,7 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 In the text box within the **Copilot** pane, enter the following text and then send it:
 
-   `add an option for “Completed” to the Status column`
+   ```add an option for “Completed” to the Status column```
 
 The system might take a minute to load. When it does, the **Status** column shows as updated and includes the option for **Completed**.
 
