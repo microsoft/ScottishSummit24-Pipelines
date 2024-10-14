@@ -32,7 +32,7 @@ With the credentials that were provided to you by the trainers, let's log into t
 
 ## Task 2: Deploy the pipelines solution to your Prod environment
 
-In this task, you will learn how to install the pipelines for Power Platform solution in your `Prod` environment. This solution is needed to configure pipelines.
+In this task, you will learn how to install the pipelines for Power Platform solution in your `UserXX-Prod` environment. This solution is needed to configure pipelines.
 
 > [!IMPORTANT]
 >  
