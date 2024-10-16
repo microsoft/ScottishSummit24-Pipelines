@@ -31,6 +31,12 @@ You now have a GitHub account. Welcome to the community!
 
 ## ☑️ Task 2: Create a GitHub repository
 
+1. From the [GitHub](https://github.com) website click on **New** to create a new repository
+1. Provide the name `my-first-repository` and select `Private` 
+1. Click on **Create repository** to create a new repository
+
+![Create a new GitHub repository form](./assets/extend-pipelines-github-export-flow.png)
+
 ## ☑️ Task 3: Create a Power Automate cloud flow to store source code in a GitHub repository
 
 This article demonstrates using [GitHub Actions](https://docs.github.com/en/actions/quickstart) and Power Automate cloud flows for extending pipelines in Power Platform. When a pipelines deployment is submitted, a cloud flow triggers the GitHub workflow to download, unpack, and commit the artifact's source code to a GitHub branch.
