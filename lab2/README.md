@@ -8,58 +8,7 @@ In this lab, you will go though the following tasks:
 ✅ Create A Solution  
 ✅ Add Required Components To Solution  
 
-## ☑️ Task 1: Create a solution
-
-In this task, you will create a solution for the components we just created via Copilot!
-
-1. Go to [make.powerapps.com](https://make.powerapps.com/) and Sign In with your Power Apps credentials.
-
-1. From the Power Apps home screen, select Solutions in the left navigation.
-
-    ![Screenshot of the Solutions section on the homepage](./assets/Solutions.png)
-
-1. Select **+ New solution** at the top of the screen.
-
-    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Solution.png)
-
-1. Add the solution display name `Scottish Summit 2024`, change the name to `SS2024` and select **+ New publisher**
-
-    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Publisher.png)
-
-1. Add the `Display name`, `Name` and `Prefix`. Select **Save** when you're done.
-
-    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Publisher-Details.png)
-
-1. Select the newly created publisher from the `Publisher` dropdown.
-
-    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Publisher-Select.png)
-
-1. Select the **Create** button at the bottom.
-
-    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Solution-Create.png)
-
-This concludes task 3, you have created the `Scottish Summit 2024` solution.
-
-![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Solution-Finished.png)
-
-## ☑️ Task 2: Set your preferred solution
-
-Now you have created your solution, it's time to set the solution as your preferred solution.
-
-1. Select the **gear** icon in the top right corner
-1. Select the text **Set preferred solution**
-
-    ![Screenshot of the solution view where you can use the gear icon to set your preferred solution](./assets/Preferred-Solution-Set.png)
-
-1. Select the **arrow** that points down to show all solutions and select **Scottish Summit 2024**.
-
-    ![Screenshot of the solution view where you can use the gear icon to set your preferred solution](./assets/Preferred-Solution-Select.png)
-
-1. Select the **apply** button to confirm your choice.
-
-    ![Screenshot of the solution view where you can use the gear icon to set your preferred solution](./assets/Preferred-Solution-Apply.png)
-
-## ☑️ Task 3: Create a Canvas App with Power Apps Copilot
+## ☑️ Task 1: Create a Canvas App with Power Apps Copilot
 
 In this task, you’ll create an application leveraging Power Apps Copilot.  This app will be used by field agents to browse real estate inventory and manage appointments for showings and the data will be stored in Dataverse.
 
@@ -306,6 +255,39 @@ Next, you'll edit the table now that the app has been created.
 
 Congratulations! You have now created a Power Apps Canvas App with Copilot!
 
+## ☑️ Task 2: Create a solution
+
+In this task, you will create a solution for the components we just created via Copilot!
+
+1. Go to [make.powerapps.com](https://make.powerapps.com/) and Sign In with your Power Apps credentials.
+
+1. From the Power Apps home screen, select Solutions in the left navigation.
+
+    ![Screenshot of the Solutions section on the homepage](./assets/Solutions.png)
+
+1. Select **+ New solution** at the top of the screen.
+
+    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Solution.png)
+
+1. Add the solution display name `Scottish Summit 2024`, change the name to `SS2024` and select **+ New publisher**
+
+    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Publisher.png)
+
+1. Add the `Display name`, `Name` and `Prefix`. Select **Save** when you're done.
+
+    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Publisher-Details.png)
+
+1. Select the newly created publisher from the `Publisher` dropdown.
+
+    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Publisher-Select.png)
+
+1. Select the **Create** button at the bottom.
+
+    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Solution-Create.png)
+
+This concludes task 3, you have created the `Scottish Summit 2024` solution.
+
+![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Solution-Finished.png)
 
 ## Next lab
 
