@@ -35,7 +35,7 @@ You now have a GitHub account. Welcome to the community!
 1. Provide the name `my-first-repository` and select `Private` 
 1. Click on **Create repository** to create a new repository
 
-![Create a new GitHub repository form](./assets/extend-pipelines-github-export-flow.png)
+![Create a new GitHub repository form](./assets/new-git-repository.png)
 
 ## ☑️ Task 3: Create a Power Automate cloud flow to store source code in a GitHub repository
 
