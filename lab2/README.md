@@ -12,6 +12,10 @@ In this lab, you will go though the following tasks:
 
 In this task, you’ll create an application leveraging Power Apps Copilot.  This app will be used by field agents to browse real estate inventory and manage appointments for showings and the data will be stored in Dataverse.
 
+> [!ALERT]
+>
+> BE AWARE: Check if you are in the right environment. Make sure you are in the UserXX-Dev environment!
+
 ### Create a canvas app with natural language
 
 1. Go to the Home page in Power Apps, by navigating to [make.powerapps.com](https://make.powerapps.com)
