@@ -4,7 +4,7 @@
 
 In this lab, you will go through only one task:
 
-- Extend the previous pipeline with Approvals
+✅ Extend the previous pipeline with Approvals
 
 ## ☑️ Task: Extend the previous pipeline with Approvals
 
