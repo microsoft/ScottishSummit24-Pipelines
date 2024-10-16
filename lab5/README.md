@@ -8,9 +8,9 @@
 
 In this lab, you will go though the following tasks:
 
-- Create a GitHub account
-- Create a GitHub repository
-- Create a Power Automate cloud flow to store source code in a GitHub repository
+✅ Create a GitHub account  
+✅ Create a GitHub repository  
+✅ Create a Power Automate cloud flow to store source code in a GitHub repository  
 
 ## ☑️ Task 1: Create a GitHub account
 
