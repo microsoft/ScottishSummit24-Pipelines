@@ -204,23 +204,11 @@ In this task, you will deploy the solution we created in lab 2 to the QA and Pro
 
     ![](./assets/run-first-pipeline-select-target.png)
 
-1. Notice the message at below the deployment schedule. This indicates that this pipeline uses AI to generate a solution overview
-
-    ![](./assets/run-first-pipeline-ai-generated-description.png)
-
 1. Leave everything on default and select the purple **Next** button on the bottom of the sidebar
 
-    This will lead you to the next section called `Summary`. Here you can find a bunch of info about the solution you are about to deploy to the QA environment. It also shows an AI suggested solution overview
+    This will lead you to the next section called `Summary`. Here you can find a bunch of info about the solution you are about to deploy to the QA environment.
 
     ![](./assets/run-first-pipeline-summary-ai.png)
-
-    When you're happy with that AI generated solution overview, select the **Apply** button below the AI suggested solution overview
-
-    Now the AI suggested solution overview is added in the `Deployment notes` box
-
-    ![](./assets/run-first-pipeline-ai-generated-description-approved.png)
-
-1. Check the AI suggested solution overview to make sure it doesn't include any errors and correct where needed
 
 1. Select the purple **Deploy** button
 
