@@ -4,9 +4,9 @@
 
 In this lab, you will go though the following tasks:
 
-- Creating A Solution
-- Setting your preferred solution
-- Creating A Canvas App With Power Apps Copilot
+✅ Creating A Canvas App With Power Apps Copilot
+✅ Create A Solution
+✅ Add Required Components To Solution
 
 ## ☑️ Task 1: Create a solution
 
