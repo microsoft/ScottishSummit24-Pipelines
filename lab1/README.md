@@ -30,7 +30,7 @@ With the credentials that were provided to you by the trainers, let's log into t
 
     ![Power apps home page](assets/power-apps-home-page.png)
 
-## Task 2: Deploy the pipelines solution to your Prod environment
+## Task 2: Deploy the pipelines solution to your UserXX-Prod environment
 
 In this task, you will learn how to install the pipelines for Power Platform solution in your `UserXX-Prod` environment. This solution is needed to configure pipelines.
 
@@ -40,9 +40,7 @@ In this task, you will learn how to install the pipelines for Power Platform sol
 >
 > This is a best practice because you will avoid people accidentally using dependencies on the pipelines tables, or having issues with sharing pipelines and giving people the right security roles. Take a look at the [FAQ on Microsoft Learn](https://learn.microsoft.com/power-platform/alm/pipelines#frequently-asked-questions) to learn more best practices.
 
-There are two ways to install the pipelines solution:
-
-### Via Power Platform Admin Center
+### Install via Power Platform Admin Center
 
 1. Go to the [Power Platform Admin Center](https://aka.ms/ppac)
 
