@@ -14,7 +14,7 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 > [!CAUTION]
 >
-> BE AWARE: Check if you are in the right environment. Make sure you are in the UserXX-Dev environment!
+> BE AWARE: Check if you are in the right environment. Make sure you are in the **UserXX-Dev** environment!
 
 ### Create a canvas app with natural language
 
