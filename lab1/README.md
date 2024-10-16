@@ -9,14 +9,14 @@ Before we start with the lab, there are a couple of things we want you to be awa
 
 In this lab, you will go though the following tasks:
 
-- Log into make.powerapps.com with your account
+- Log into make.preview.powerapps.com with your account
 - Deploy the pipelines solution to your Prod environment
 
 ## Task 1: Log on to your account
 
 With the credentials that were provided to you by the trainers, let's log into the account you are going to use during this workshop.
 
-1. Go to [make.powerapps.com](https://make.powerapps.com)
+1. Go to [make.preview.powerapps.com](https://make.preview.powerapps.com)
 1. On the sign-in screen, enter the email address that was provided to you and then click **Next**
 
     ![Sign in screen](assets/pa-sign-in-email.png)
@@ -66,7 +66,7 @@ In this task, you will learn how to install the pipelines for Power Platform sol
 
 This process will take a couple of minutes, you can refresh the page by selecting the **Refresh** button in the command bar at the top.
 
-When finished, you can go to the [maker portal](https://make.powerapps.com) and select the right environment (`UserXX-Prod` - replace `XX` by your user number). If all went well, you should be able to see the `Deployment Pipeline Configuration` app in the Apps section in the maker portal.
+When finished, you can go to the [maker portal](https://make.preview.powerapps.com) and select the right environment (`UserXX-Prod` - replace `XX` by your user number). If all went well, you should be able to see the `Deployment Pipeline Configuration` app in the Apps section in the maker portal.
 
 ## Next lab
 

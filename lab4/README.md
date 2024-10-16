@@ -12,7 +12,7 @@ In this lab, you will go through only one task:
 
 In this task, you will learn how to extend the pipeline and add an approval before deploying to production.
 
-1. Go to the [maker portal](https://make.powerapps.com)
+1. Go to the [maker portal](https://make.preview.powerapps.com)
 
 2. Check if you are in the `UserXX-Prod` environment and if not, switch to that environment
 
@@ -42,7 +42,7 @@ In this task, you will learn how to extend the pipeline and add an approval befo
 
 In this task, you will learn how to create an approval flow that will handle the approval before deploying to production.
 
-1. Go to the [maker portal](https://make.powerapps.com)
+1. Go to the [maker portal](https://make.preview.powerapps.com)
 
 2. Check if you are in the `UserXX-Prod` environment and if not, switch to that environment
 
@@ -177,7 +177,7 @@ In this task, you are going to find out if the approval you configured in the la
 
 #### Deploy to prod (with approval)
 
-1. Go to the [maker portal](https://make.powerapps.com)
+1. Go to the [maker portal](https://make.preview.powerapps.com)
 
 1. Check if you are in the **Dev** environment and if not, switch to that environment
 

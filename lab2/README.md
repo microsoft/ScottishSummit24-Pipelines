@@ -13,7 +13,7 @@ In this lab, you will go though the following tasks:
 
 In this task, you will create a solution for the components we just created via Copilot!
 
-1. Go to [make.powerapps.com](https://make.powerapps.com/) and Sign In with your Power Apps credentials.
+1. Go to [make.preview.powerapps.com](https://make.preview.powerapps.com/) and Sign In with your Power Apps credentials.
 
 1. From the Power Apps home screen, select Solutions in the left navigation.
 
@@ -70,7 +70,7 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 ### Create a canvas app with natural language
 
-1. Go to the Home page in Power Apps, by navigating to [make.powerapps.com](https://make.powerapps.com)
+1. Go to the Home page in Power Apps, by navigating to [make.preview.powerapps.com](https://make.preview.powerapps.com)
 1. On the Home page in Power Apps, in the center text field, enter the following prompt to search for an AI-generated table:
 
    `build an app to manage real estate showings`
