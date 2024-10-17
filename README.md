@@ -9,6 +9,12 @@
 
 Learn how to build and deploy Power Apps for enterprise scale across your organization. For more advanced makers and developers, you'll get hands-on experience with the full application lifecycle: from setting up your tenant with the right guardrails, development best practices to ensure your apps run performantly, deploying your work using the newest AI-powered pipelines ALM capabilities, and ensuring all this is easily governable.
 
+## 📷 Slides
+
+You can find the slides in the assets folder, the slides are used during the workshop day and provide the theoretical background for the labs. 
+
+🗃️ [You can download slides.](./assets/Build,%20Deploy,%20and%20Scale%20Power%20Apps%20with%20pipelines%20for%20Power%20Platform.pdf)
+
 ## 🚀 Labs
 
 The labs are as follows:
